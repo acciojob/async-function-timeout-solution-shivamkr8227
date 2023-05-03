@@ -10,7 +10,7 @@ async function showMessage() {
   // await new Promise((resolve) => setTimeout(resolve, delayVal));
 	await new Promice((resolve)=>{
 		settimeout(()=>{
-			resolve
+			resolve(message);
 		},delayVal);
 	});
   output.innerText = message;

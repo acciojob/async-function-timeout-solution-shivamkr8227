@@ -6,9 +6,9 @@ const output = document.getElementById("output");
 //your code here
 async function showMessage() {
   const message = text.value;
-  const delayVal = delay.value;
+  const delayVal = delay.value*1000;
   await new Promise((resolve) => setTimeout(resolve, delayVal));
   output.innerText = message;
 }
 
-btn.addEventListener("click", showMessage);
+btn.addEventListener("click", showMessage());

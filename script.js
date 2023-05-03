@@ -7,8 +7,13 @@ const output = document.getElementById("output");
 async function showMessage() {
   const message = text.value;
   const delayVal = delay.value*1000;
-  await new Promise((resolve) => setTimeout(resolve, delayVal));
+  // await new Promise((resolve) => setTimeout(resolve, delayVal));
+	await new Promice((resolve)=>{
+		settimeout(()=>{
+			resolve
+		},delayVal);
+	});
   output.innerText = message;
 }
 
-btn.addEventListener("click", showMessage());
+btn.addEventListener("click", showMessage);
